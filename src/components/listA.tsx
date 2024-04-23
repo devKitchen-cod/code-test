@@ -26,10 +26,13 @@ const ListA: React.FC<IListAProps> = ({
 }) => {
   const [state, setState] = useState({} as any);
   const dispatch = useAppDispatch();
+  //Getting data on the selected pokémon
   const handleGetData = async (name: any) => {
     let current_pokemon: any = await getPokemon(name);
     setState(current_pokemon);
   };
+
+  //Save the data about the current and selected Pokémon to the store
   dispatch(setAbilitiesForCurrentPokemon(state.abilities));
   dispatch(setStatsForCurrentPokemon(state.stats));
 

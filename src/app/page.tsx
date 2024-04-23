@@ -1,6 +1,6 @@
 import { getPokemon, listPokemon, typedFetch } from "./utils/fetchPokemon";
-import ListA from "@/components/listA";
-import ListB from "@/components/listB";
+import ListA from "@/components/ListA";
+import ListB from "@/components/ListB";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -10,13 +10,11 @@ const inter = Inter({
 });
 
 export default async function Home() {
-  const pokemon = await getPokemon("charmander");
   const listPokemonlist = await listPokemon(8);
   const array = listPokemonlist.results;
 
   return (
-    <div className='min-h-screen max-h-full w-full flex flex-col gap-4 items-center justify-center bg-[#FCFCFC] p-20'>
-      <h1 className=' font-bold text-center'>ProximaHQ Coding Challenge</h1>
+    <div className='min-h-screen max-h-full w-full flex flex-col gap-4 items-center justify-center bg-[#FCFCFC] '>
       <div className='  w-[100%]  grid grid-cols-2 p-10'>
         <div className='  w-[100%]'>
           <ListA
@@ -29,11 +27,10 @@ export default async function Home() {
         </div>
         <div className='  w-[100%]  '>
           <ListB
-            listOfItems={array}
-            // backgroundColor='bg-base-200'
+            backgroundColor='bg-base-200'
             fontFamily={inter}
-            // fontSize='text-[20px]'
-            // fontColor='text-black-200'
+            fontSize='text-[20px]'
+            fontColor='text-black-200'
           />
         </div>
       </div>

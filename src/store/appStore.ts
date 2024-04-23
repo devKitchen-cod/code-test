@@ -1,6 +1,5 @@
 import  mySlice  from "@/features/appSlice";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-// import authSlice from "../features/appSlice";
 
 export const rootReducer = combineReducers({
   app: mySlice,

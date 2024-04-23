@@ -1,21 +1,18 @@
 import React from "react";
-import SatsCard from "./statsCard";
-import AbilitiesCard from "./abilitiesCard";
+import SatsCard from "./StatsCard";
+import AbilitiesCard from "./AbilitiesCard";
 
 interface IListB {
-  listOfItems: any;
-
   fontFamily: any;
-  headerSize: any;
-  paragraphSize: any;
+  fontSize: any;
   backgroundColor: any;
   fontColor: any;
 }
-const ListB: React.FC<IListB> = ({ fontFamily }) => {
+const ListB: React.FC<IListB> = ({ fontFamily, fontSize, backgroundColor, fontColor }) => {
   return (
     <div className={`w-[100%] `}>
-      <SatsCard fontFamily={fontFamily} />
-      <AbilitiesCard fontFamily={fontFamily} />
+      <SatsCard fontFamily={fontFamily} fontSize={fontSize} backgroundColor={backgroundColor} fontColor={fontColor}/>
+      <AbilitiesCard fontFamily={fontFamily} fontSize={fontSize} backgroundColor={backgroundColor} fontColor={fontColor}/>
     </div>
   );
 };
