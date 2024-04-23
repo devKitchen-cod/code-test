@@ -1,11 +1,11 @@
 import { RootState } from "../store/appStore";
 
 const getCurrentPokemon = (state: RootState) => state.app.current_pokemon;
+const getAbilitiesPokemon = (state: RootState) => state.app.abilities
 
-// const getEmail = (state: RootState) => state.app.email;
-// const getIsAuth = (state: RootState) => state.app.isAuthenticated;
 const appSelectore = {
   getCurrentPokemon,
+  getAbilitiesPokemon
 };
 
 export default appSelectore;

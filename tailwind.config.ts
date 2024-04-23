@@ -17,7 +17,9 @@ const config: Config = {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
       },
+      
     },
+    
   },
   plugins: [require("daisyui")],
 };
